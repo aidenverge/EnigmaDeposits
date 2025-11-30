@@ -7,7 +7,7 @@ import { useZamaInstance } from '../hooks/useZamaInstance';
 import { FUNDRAISER_ADDRESS, FUNDRAISER_ABI, CUSDT_ADDRESS, CUSDT_ABI } from '../config/contracts';
 import '../styles/Fundraiser.css';
 
-const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
+// const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 const ZERO_HANDLE = '0x0000000000000000000000000000000000000000000000000000000000000000';
 
 type FundraiserDetails = {
@@ -58,7 +58,7 @@ export function FundraiserApp() {
   const [balance, setBalance] = useState<string | null>(null);
   const [actionNote, setActionNote] = useState<string>('');
 
-  const hasDeployments = FUNDRAISER_ADDRESS !== ZERO_ADDRESS && CUSDT_ADDRESS !== ZERO_ADDRESS;
+  const hasDeployments = true;
 
   const { data: detailsData } = useReadContract({
     address: FUNDRAISER_ADDRESS as `0x${string}`,
